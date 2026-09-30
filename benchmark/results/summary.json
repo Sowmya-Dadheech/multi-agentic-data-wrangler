@@ -1,0 +1,225 @@
+{
+  "planner": "heuristic",
+  "datasets": 36,
+  "total_rows_first_pass": 233000,
+  "first": {
+    "runs": 36,
+    "auto_success_pct": 86.1,
+    "needs_human_pct": 13.9,
+    "final_success_pct": 100.0,
+    "first_try_pct": 47.2,
+    "mean_attempts": 1.47,
+    "memory_exact_pct": 0.0,
+    "memory_similar_pct": 83.3,
+    "planner_calls": 45,
+    "llm_calls": 0,
+    "tokens": 0,
+    "est_prompt_tokens": 97922,
+    "median_seconds": 1.25,
+    "detection_precision_pct": 98.5,
+    "detection_recall_pct": 98.8,
+    "repair_accuracy_pct": 99.1,
+    "collateral_pct": 0.0,
+    "garbage_nulled_pct": 100.0,
+    "rename_accuracy_pct": 94.7,
+    "dirty_cells": 374216,
+    "repair_by_kind_pct": {
+      "bool": 100.0,
+      "category": 100.0,
+      "date": 100.0,
+      "datetime": 100.0,
+      "float": 91.4,
+      "id": 100.0,
+      "int": 100.0,
+      "str": 100.0
+    },
+    "demoted": 0,
+    "pushdown_runs": 0
+  },
+  "repeat": {
+    "runs": 36,
+    "auto_success_pct": 100.0,
+    "needs_human_pct": 0.0,
+    "final_success_pct": 100.0,
+    "first_try_pct": 100.0,
+    "mean_attempts": 1.0,
+    "memory_exact_pct": 83.3,
+    "memory_similar_pct": 16.7,
+    "planner_calls": 6,
+    "llm_calls": 0,
+    "tokens": 0,
+    "est_prompt_tokens": 10917,
+    "median_seconds": 0.96,
+    "detection_precision_pct": 98.5,
+    "detection_recall_pct": 98.8,
+    "repair_accuracy_pct": 99.1,
+    "collateral_pct": 0.0,
+    "garbage_nulled_pct": 100.0,
+    "rename_accuracy_pct": 94.7,
+    "dirty_cells": 374158,
+    "repair_by_kind_pct": {
+      "bool": 100.0,
+      "category": 100.0,
+      "date": 100.0,
+      "datetime": 100.0,
+      "float": 91.5,
+      "id": 100.0,
+      "int": 100.0,
+      "str": 100.0
+    },
+    "demoted": 0,
+    "pushdown_runs": 0
+  },
+  "drift": {
+    "runs": 12,
+    "auto_success_pct": 100.0,
+    "needs_human_pct": 0.0,
+    "final_success_pct": 100.0,
+    "first_try_pct": 66.7,
+    "mean_attempts": 1.42,
+    "memory_exact_pct": 16.7,
+    "memory_similar_pct": 83.3,
+    "planner_calls": 15,
+    "llm_calls": 0,
+    "tokens": 0,
+    "est_prompt_tokens": 32518,
+    "median_seconds": 1.06,
+    "detection_precision_pct": 100.0,
+    "detection_recall_pct": 99.5,
+    "repair_accuracy_pct": 99.5,
+    "collateral_pct": 0.0,
+    "garbage_nulled_pct": 100.0,
+    "rename_accuracy_pct": 96.3,
+    "dirty_cells": 107810,
+    "repair_by_kind_pct": {
+      "bool": 100.0,
+      "category": 100.0,
+      "date": 100.0,
+      "datetime": 100.0,
+      "float": 95.1,
+      "id": 100.0,
+      "int": 100.0,
+      "str": 100.0
+    },
+    "demoted": 1,
+    "pushdown_runs": 0
+  },
+  "memory_effect": {
+    "planner_calls_first": 45,
+    "planner_calls_repeat": 6,
+    "planner_call_reduction_pct": 86.7,
+    "est_tokens_first": 97922,
+    "est_tokens_repeat": 10917,
+    "token_reduction_x": 9.0,
+    "median_seconds_first": 1.25,
+    "median_seconds_repeat": 0.96
+  },
+  "guardrails": {
+    "attacks": 46,
+    "blocked": 46,
+    "catch_rate_pct": 100.0,
+    "generated_programs_checked": 84
+  },
+  "drift_detail": [
+    {
+      "dataset": "customers_0",
+      "drift": "new_column",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 1,
+      "demoted": false
+    },
+    {
+      "dataset": "customers_3",
+      "drift": "format_change",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 1,
+      "demoted": false
+    },
+    {
+      "dataset": "orders_0",
+      "drift": "broken_field",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 1,
+      "demoted": false
+    },
+    {
+      "dataset": "orders_3",
+      "drift": "new_column",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 1,
+      "demoted": false
+    },
+    {
+      "dataset": "patients_0",
+      "drift": "format_change",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 2,
+      "demoted": false
+    },
+    {
+      "dataset": "patients_3",
+      "drift": "broken_field",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 1,
+      "demoted": false
+    },
+    {
+      "dataset": "sensors_0",
+      "drift": "new_column",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 2,
+      "demoted": false
+    },
+    {
+      "dataset": "sensors_3",
+      "drift": "format_change",
+      "memory_hit": "exact",
+      "status": "succeeded",
+      "attempts": 1,
+      "demoted": false
+    },
+    {
+      "dataset": "employees_0",
+      "drift": "broken_field",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 1,
+      "demoted": false
+    },
+    {
+      "dataset": "employees_3",
+      "drift": "new_column",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 2,
+      "demoted": false
+    },
+    {
+      "dataset": "products_0",
+      "drift": "format_change",
+      "memory_hit": "exact",
+      "status": "succeeded",
+      "attempts": 3,
+      "demoted": true
+    },
+    {
+      "dataset": "products_3",
+      "drift": "broken_field",
+      "memory_hit": "similar",
+      "status": "succeeded",
+      "attempts": 1,
+      "demoted": false
+    }
+  ],
+  "review_reasons": {
+    "planner confidence 0.40 below 0.6": 3,
+    "planner confidence 0.45 below 0.6": 2
+  }
+}

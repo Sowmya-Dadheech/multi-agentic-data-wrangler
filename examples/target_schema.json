@@ -1,0 +1,11 @@
+{
+  "customer_id": {"type": "string", "examples": ["C00042"]},
+  "full_name": {"type": "string", "examples": ["Maya Iyer"]},
+  "email": {"type": "string", "examples": ["maya.iyer@example.com"]},
+  "age": {"type": "int", "examples": ["34"]},
+  "signup_date": {"type": "date", "examples": ["2024-03-18"]},
+  "plan": {"type": "category", "examples": ["Pro"]},
+  "is_active": {"type": "bool", "examples": ["true"]},
+  "city": {"type": "category", "examples": ["Seattle"]},
+  "lifetime_value": {"type": "float", "examples": ["1203.5"]}
+}

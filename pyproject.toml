@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-data-wrangler"
+version = "0.1.0"
+description = "A LangGraph multi-agent pipeline that profiles messy SQL / MongoDB / CSV data, generates cleaning transformations, runs them behind layered guardrails, and remembers approved fixes across runs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sowmya" }]
+keywords = ["langgraph", "llm", "agents", "data-cleaning", "data-quality", "mongodb", "sql"]
+dependencies = [
+    "langgraph>=1.0",
+    "langgraph-checkpoint-sqlite>=2.0",
+    "langchain-core>=0.3",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "pyarrow>=15",
+    "pydantic>=2.6",
+    "sqlalchemy>=2.0",
+    "sqlglot>=25",
+    "pymongo>=4.6",
+    "mongomock>=4.1",
+    "rapidfuzz>=3.6",
+    "rich>=13",
+]
+
+[project.optional-dependencies]
+anthropic = ["langchain-anthropic>=0.3"]
+openai = ["langchain-openai>=0.2"]
+ollama = ["langchain-ollama>=0.2"]
+postgres = ["psycopg2-binary>=2.9"]
+bench = ["matplotlib>=3.8"]
+dev = ["pytest>=8", "matplotlib>=3.8"]
+# optional: embedded Postgres for the SQL-pushdown parity test and the Postgres part of the
+# benchmark (pgserver has no wheels for every Python/OS combo; tests skip cleanly without it)
+pgtest = ["pgserver>=0.1", "psycopg2-binary>=2.9"]
+
+[project.scripts]
+wrangle = "wrangler.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+wrangler = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
