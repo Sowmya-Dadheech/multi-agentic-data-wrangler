@@ -93,7 +93,7 @@ Every arrow is a deterministic edge in the graph, not an LLM decision. **Code ca
 ## Quickstart
 
 ```bash
-git clone <this repo> && cd agentic-data-wrangler
+git clone https://github.com/Sowmya-Dadheech/multi-agentic-data-wrangler.git && cd multi-agentic-data-wrangler
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"            # add ,pgtest for the embedded-Postgres test (Python ≤3.12)
 
